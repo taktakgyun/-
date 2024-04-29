@@ -1,11 +1,14 @@
 import re
-from bs4 import BeautifulSoup
+import os
+import argparse
 from icecream import ic
 
+readme = "README.md"
 
-def calculate_progress(readme_path):
+
+def calculate_progress(dir_path):
     # README.md 파일 열기
-    with open(readme_path, "r", encoding="utf-8") as file:
+    with open(os.path.join(dir_path, readme), "r", encoding="utf-8") as file:
         contents = file.read()
 
     # 안풀린 문제 수 찾기
@@ -22,65 +25,48 @@ def calculate_progress(readme_path):
     return progress
 
 
-def update_progress_in_readme(progress, readme_path):
+def update_progress_in_readme(progress, target_dir):
     # README.md 파일 열기
-    with open(readme_path, "r", encoding="utf-8") as file:
+    with open(readme, "r", encoding="utf-8") as file:
         contents = file.read()
 
     # 진행도 표시 업데이트
-
-    progress_format = f'<div class="progress" style="width: '
+    progress_format = f"{target_dir} : ![](https://geps.dev/progress/"
 
     # 정규 표현식을 사용하여 포맷이 존재하는지 확인
     if re.search(re.escape(progress_format), contents):
         # 진행률 업데이트
-        progress_style = (
-            f'<div class="progress" style="width: {(int(progress))}%;"></div>'
-        )
+        progress_style = f"{target_dir} : ![](https://geps.dev/progress/{progress})<br>"
         updated_contents = re.sub(
-            r'<div class="progress" style="width: \d+%;">', progress_style, contents
+            r"{target_dir} : ![](https://geps.dev/progress/\d+)<br>",
+            progress_style,
+            contents,
         )
     else:
         updated_contents = (
-            contents
-            + f"""
-
-진행상황
-===
-<div class="progress-bar">
-  <div class="progress" style="width: {int(progress)}%;"></div>
-</div>
-"""
-            + """
-<style>
-.progress-bar {
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  height: 20px;
-  width: 300px;
-  margin-bottom: 10px;
-}
-
-.progress {
-  background-color: #4caf50;
-  height: 100%;
-  border-radius: 5px;
-  text-align: center;
-  color: white;
-}
-</style>
-"""
+            contents + f"{target_dir} : ![](https://geps.dev/progress/{progress})<br>\n"
         )
 
     # README.md 파일에 업데이트된 내용 쓰기
-    with open(readme_path, "w", encoding="utf-8") as file:
+    with open(readme, "w", encoding="utf-8") as file:
         file.write(updated_contents)
 
 
+def parse_opt():
+    parser = argparse.ArgumentParser(description="Update Progress")
+    parser.add_argument(
+        "--dir", type=str, default="01week", help="Path to the target directory."
+    )
+    opt = parser.parse_args()
+    return opt
+
+
 if __name__ == "__main__":
-    readme_path = "01week/README.md"
-    progress = calculate_progress(readme_path)
-    print(f"현재 진행도: {progress}%")
+    opt = parse_opt()
+
+    dir_path = opt.dir
+    progress = calculate_progress(dir_path)
+    print(f"{dir_path} 현재 진행도: {progress}%")
 
     # README.md 파일에 진행도 업데이트
-    update_progress_in_readme(progress, "README.md")
+    update_progress_in_readme(int(progress), dir_path)
