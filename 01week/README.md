@@ -11,7 +11,7 @@
 - [X] 1 - A : 2309 - http://boj.kr/5cbef80aaad4484a8c3ea73bebf2c0ab
 - [X] 1 - A : 2309 - http://boj.kr/6b0acb8d4af043f88800c74b72d77610
 - [X] 1 - A : 2309 - http://boj.kr/2da2c198ee3744e2babea1986b2fffd6
-- [ ] 1 - B : 10808 - http://boj.kr/1a1898996c8542889b32b4c1b2498dd0
+- [X] 1 - B : 10808 - http://boj.kr/1a1898996c8542889b32b4c1b2498dd0
 - [ ] 1 - C : 2979 - http://boj.kr/4e97e76bb0dd438fba134d0aada1c531
 - [ ] 1 - D : 10988 - http://boj.kr/c7b230ec84bf4153a125b858a5ef77e2
 - [ ] 1 - E : 1159 - http://boj.kr/5bf6553f957e4a4586dace497284f319
