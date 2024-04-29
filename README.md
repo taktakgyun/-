@@ -6,6 +6,7 @@
 
 진행상황
 ===
+
 <style>
 .rounded-box {
     background-color: #ff7f50; /* 새로운 배경색 (예: 코랄) */
