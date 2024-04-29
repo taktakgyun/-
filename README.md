@@ -6,5 +6,19 @@
 
 진행상황
 ===
-01week : ![](https://geps.dev/progress/17)<br>
-02week : ![](https://geps.dev/progress/0)<br>
+<style>
+.rounded-box {
+    background-color: #ff7f50; /* 새로운 배경색 (예: 코랄) */
+    border-radius: 8px; /* 모서리 둥글게 */
+    display: inline-block; /* 글자 크기에 맞게 크기 조정 */
+    padding: 8px 16px; /* 내부 여백 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 예쁜 글꼴 설정 */
+    font-size: 14px; /* 글자 크기 */
+    color: #333; /* 글자 색상 */
+    margin-right: 8px; /* 오른쪽 여백 */
+}
+</style>
+
+<div class="rounded-box"><p>01week</p></div> ![](https://geps.dev/progress/17)<br>
+<div class="rounded-box"><p>02week</p></div> ![](https://geps.dev/progress/0)<br>

@@ -31,12 +31,12 @@ def update_progress_in_readme(progress, target_dir):
         contents = file.read()
 
     # 진행도 표시 업데이트
-    progress_format = f"{target_dir} : ![](https://geps.dev/progress/"
+    progress_format = f'<div class="rounded-box"><p>{target_dir}</p></div> ![](https://geps.dev/progress/'
 
     # 정규 표현식을 사용하여 포맷이 존재하는지 확인
     if re.search(re.escape(progress_format), contents):
         # 진행률 업데이트
-        progress_style = f"{target_dir} : ![](https://geps.dev/progress/{progress})<br>"
+        progress_style = f'<div class="rounded-box"><p>{target_dir}</p></div> ![](https://geps.dev/progress/{progress})<br>'
         updated_contents = re.sub(
             r"{target_dir} : ![](https://geps.dev/progress/\d+)<br>",
             progress_style,
@@ -44,7 +44,8 @@ def update_progress_in_readme(progress, target_dir):
         )
     else:
         updated_contents = (
-            contents + f"{target_dir} : ![](https://geps.dev/progress/{progress})<br>\n"
+            contents
+            + f'<div class="rounded-box"><p>{target_dir}</p></div> ![](https://geps.dev/progress/{progress})<br>\n'
         )
 
     # README.md 파일에 업데이트된 내용 쓰기
