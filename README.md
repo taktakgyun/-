@@ -7,5 +7,5 @@
 진행상황
 ===
 
-01week : ![](https://geps.dev/progress/17)<br>
+01week : ![](https://geps.dev/progress/23)<br>
 02week : ![](https://geps.dev/progress/0)<br>

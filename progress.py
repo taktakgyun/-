@@ -30,7 +30,6 @@ def update_progress_in_readme(progress, target_dir):
     with open(readme, "r", encoding="utf-8") as file:
         contents = file.read()
 
-
     # 진행도 표시 업데이트
     progress_format = f"{target_dir} : ![](https://geps.dev/progress/"
 
@@ -39,7 +38,7 @@ def update_progress_in_readme(progress, target_dir):
         # 진행률 업데이트
         progress_style = f"{target_dir} : ![](https://geps.dev/progress/{progress})<br>"
         updated_contents = re.sub(
-            r"{target_dir} : ![](https://geps.dev/progress/\d+)<br>",
+            f"{target_dir} : " + r"!\[\]\(https://geps.dev/progress/\d+\)<br>",
             progress_style,
             contents,
         )
