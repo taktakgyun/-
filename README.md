@@ -11,5 +11,5 @@ g++ -std=c++14 -Wall a.cpp -o test.out
 진행상황
 ===
 
-01week : ![](https://geps.dev/progress/23)<br>
+01week : ![](https://geps.dev/progress/29)<br>
 02week : ![](https://geps.dev/progress/0)<br>
