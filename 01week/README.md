@@ -21,7 +21,7 @@
 - [X] 1 - I : 1620 - http://boj.kr/0f8a07e622564e12bd5f262fc8f0d61b
 - [X] 1 - J : 9375 - http://boj.kr/2c284c870fb64ae8adb0a5760111c03d
 - [X] 1 - K : 1213 - http://boj.kr/316bc219aa424428a8bc5ae767894d88
-- [ ] 1 - L : 1940 - http://boj.kr/2298726c5e12472bb1882ce7ad96981f
+- [X] 1 - L : 1940 - http://boj.kr/2298726c5e12472bb1882ce7ad96981f
 - [ ] 1 - M : 3986 - http://boj.kr/1797670218184cc385194f46b1b967dd
 - [ ] 1 - N : 1629 - http://boj.kr/18c305ece6324314ad0b7c6941ed9b30
 - [ ] 1 – O : 4375 - http://boj.kr/75cf536d0f434f7eb1e532ff626ca019

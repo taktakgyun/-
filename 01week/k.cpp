@@ -10,11 +10,11 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-
 int cnt[128], odd;
-string s, ret, temp;
-
+string s, ret;
 int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
 	// input
 	cin >> s;
 	
@@ -22,9 +22,9 @@ int main(){
 	for(char c : s) cnt[(int)c]++; 
 	
 	// befor 
-	for(int i='A'; i<='Z'; i++){
+	for(int i='Z'; i>='A'; i--){
 		if (cnt[i] > 0 ){
-			if (cnt[i] % 2 == 1 ){//odd 
+			if (cnt[i] & 1){//odd 
 				if(odd >='A'){ // already end 
 					cout <<  "I'm Sorry Hansoo\n";
 					return 0; 
@@ -32,14 +32,15 @@ int main(){
 				odd = i; 
 			}
 			int k = cnt[i] / 2;
-			while(k--) ret += (char) i; 
+			while(k--){
+				ret = char (i) + ret;
+				ret += char (i); 
+			}
 		} 
 	} 
 	
 	// output 
-	cout << ret;
-	if (odd >= 'A') cout << (char)odd;
-	reverse(ret.begin(), ret.end());
+	if (odd) ret.insert(ret.begin() + ret.size()/2, char (odd));
 	cout << ret<<"\n";
 	
 	return 0; 
