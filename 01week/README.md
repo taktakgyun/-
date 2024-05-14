@@ -24,4 +24,4 @@
 - [X] 1 - L : 1940 - http://boj.kr/2298726c5e12472bb1882ce7ad96981f
 - [X] 1 - M : 3986 - http://boj.kr/1797670218184cc385194f46b1b967dd
 - [X] 1 - N : 1629 - http://boj.kr/18c305ece6324314ad0b7c6941ed9b30
-- [ ] 1 – O : 4375 - http://boj.kr/75cf536d0f434f7eb1e532ff626ca019
+- [X] 1 – O : 4375 - http://boj.kr/75cf536d0f434f7eb1e532ff626ca019
