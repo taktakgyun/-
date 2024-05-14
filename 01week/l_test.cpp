@@ -27,13 +27,13 @@ int main(){
 	// calc
 	if(M <= 200000)
     {
-    	temp =  max(M-100000,0); 
     	// Â¦¼ö M : M/2
     	if ( M/2 == M-(M/2) ){
 			ret += cnt[M/2] / 2; 
-		} 
-    	
+		}
+		
     	//  max(M-100000,0)<=i<=((M+1)/2 -1, max_v)
+    	temp =  max(M-100000,0); 
     	for(int i = min((M+1)/2-1, max_v); i >= temp; i--)
         {
         	ret += min(cnt[i], cnt[M-i]);
