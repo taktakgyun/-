@@ -31,11 +31,10 @@ int main(){
 	
 	// calc
 	ll ret =1;
-	A = A%C; 
-	ret = calc(A, B, C); 
+	ret = calc(A%C, B, C); 
 	cout << ret<<"\n"; 
 }
 
 // 폐기    
 // idea : ((A%C)^B)%C 
-// 시간복잡도 : O(B) 21억 < 5천만  
+// 시간복잡도 : O(B) 21억 > 5천만  
