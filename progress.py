@@ -55,7 +55,7 @@ def update_progress_in_readme(progress, target_dir):
 def parse_opt():
     parser = argparse.ArgumentParser(description="Update Progress")
     parser.add_argument(
-        "--dir", type=str, default="01week", help="Path to the target directory."
+        "--dir", type=str, default="02week", help="Path to the target directory."
     )
     opt = parser.parse_args()
     return opt
