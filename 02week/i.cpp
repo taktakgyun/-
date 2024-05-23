@@ -22,21 +22,11 @@ using namespace std;
 int N;
 string s, temp; 
 vector<string> ret;
+
 bool cmp(string a, string b){
 	if(a.size() == b.size()) return a<b; 
 	return a.size() < b.size(); 
 } 
-
-//bool cmp(string a, string b){
-//	if(a.size() == b.size()){
-//		int s = a.size(); 
-//		for(int i=0; i<s; i++){
-//			if(a[i] < b[i]) return true; 
-//		} 
-//		return false; 
-//	}
-//	return  a.size() < b.size(); 
-//}  
 
 string get_num(string t){
 	int i=t.size()-1; 
