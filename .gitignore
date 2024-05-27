@@ -194,4 +194,4 @@ cython_debug/
 
 *.ipynb
 *.md
-!01week/*.md
+!02week/*.md
