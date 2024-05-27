@@ -14,7 +14,7 @@ idea : dfs 동쪽으로만 이동시키기, 단 구름이 있으면 스탑/ 무조건 동쪽부터 확인
 */
 #include<bits/stdc++.h>
 using namespace std;
-int H,W, a[104][104], v[104][104];
+int H,W,v[104][104];
 const int dx=1;
 
 void dfs(int y, int x, int flag){
@@ -36,11 +36,9 @@ int main(){
 			char t;
 			cin >> t;
 			if(t=='c') {
-				a[i][j] = 1;
 				v[i][j] = 0;
 			} 
 			else {
-				a[i][j] = 0;
 				v[i][j] = -1;
 			} 
 		}
