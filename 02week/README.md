@@ -18,7 +18,7 @@
 - [X] 2 - I : 2870 - [정답](http://boj.kr/ae47352b83d04d0c9fa5f5e88d697682)
 - [X] 2 - J : 10709 - [정답](http://boj.kr/2e4e57d962ef41a9bb4bc8f670ac158c)
 - [X] 2 - K : 3474 - [정답](http://boj.kr/89fea6fe8f9241b1980f0fac22342679)
-- [ ] 2 - L : 2852 - [정답](http://boj.kr/5d5e7e5459524080abec73ee77de2fbe)
+- [X] 2 - L : 2852 - [정답](http://boj.kr/5d5e7e5459524080abec73ee77de2fbe)
 - [ ] 2 - M : 1436 - [정답](http://boj.kr/20f8f3ad94314cc8ab21a004bf75dbf6)
 - [ ] 2 - N : 9012 - [정답](http://boj.kr/fd0a8a36c94f49b59150c93831c29243)
 - [ ] 2 - O : 4949 - [정답](http://boj.kr/5802422930814efeb41969fdf2b6d4d2)
