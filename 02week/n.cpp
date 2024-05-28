@@ -14,35 +14,30 @@ using namespace std;
 int T;
 string ret, s;
 
+bool check(string S){
+	stack<char> stk;
+	for(char c:S){
+		if(c=='(') stk.push(c);
+		else{
+			if(stk.size()) stk.pop();
+			else return false; 
+		} 
+	}
+	return stk.empty(); 
+} 
 
 int main(){
 	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL); 
 	// input
 	cin >>  T;
 	
-	while(T--){
-		// init
-		stack<char> stk;
-		bool flag = false; 
-		 
+	while(T--){		 
 		//input
 		cin >> s;
-		
 		// calc
-		for(char c:s){
-			if(c=='(') stk.push(c);
-			else if (c==')'){
-				if(stk.size()) stk.pop();
-				else{
-					flag = true; 
-					break; 
-				} 
-			}
-		}
-		if(stk.size() || flag)  ret += "NO\n";
-		else ret += "YES\n";  
+		if(check(s)) ret += "YES\n";  
+		else ret += "NO\n";
 	}
-	
 	// output
 	cout << ret;
 	return 0; 
