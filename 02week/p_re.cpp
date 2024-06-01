@@ -41,7 +41,8 @@ int dfs(int y, int x, int cnt){
 
 int go(){
 	// init
-	fill(v[0], v[0]+10*10, 0);
+	memset(v, 0, sizeof(v));
+//	fill(&v[0][0], &v[0][0] + 10 * 10, 0);
 	int cnt =0;
 	
 	// dfs
@@ -50,7 +51,7 @@ int go(){
 	} 
 	
 	// count 
-	return N*M - wall -3 - cnt; 
+	return N * M - wall -3 - cnt; 
 } 
 
 int main(){
