@@ -41,10 +41,11 @@ ll dfs(int seq){
 	if(weight[seq] >= 0) return  weight[seq];
 	ll w=0; 
 	// re
-	
 	for(int n_seq : g[seq]){
 		w = max(dfs(n_seq), w); 
 	}
+	
+	// dp 
 	weight[seq] = w + D[seq]; 
 	return weight[seq]; 
 } 
@@ -57,16 +58,16 @@ int main(){
 		// input 
 		cin >> N >> K; 
 		
-		// init and input 
-		for(int i=1; i<=N; i++){
-			//init 
+		// init
+		for(int i=1; i<=1000; i++){
 			g[i].clear();
 			weight[i]=-1; 
-			//input
+		}
+		
+		// input 
+		for(int i=1; i<=N; i++){
 			cin >> D[i]; 
 		} 
-		
-		// input
 		
 		for(int i=1; i<=K; i++){
 			cin >> X >> Y;
