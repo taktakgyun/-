@@ -37,5 +37,5 @@ g++ -std=c++14 -Wall a.cpp -o test.out
 ===
 
 01week : ![](https://geps.dev/progress/100)<br>
-02week : ![](https://geps.dev/progress/85)<br>
+02week : ![](https://geps.dev/progress/90)<br>
 24etc : ![](https://geps.dev/progress/100)<br>
