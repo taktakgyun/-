@@ -2,7 +2,7 @@ import re
 import os
 import argparse
 import makeproblem
-from typing import List
+# from typing import List
 
 def extract_problem_numbers(contents):
     ## 백준 문제 번호 추출
